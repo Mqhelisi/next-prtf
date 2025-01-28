@@ -7,13 +7,19 @@ import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
 
 
+interface MyComponentProps {
+  drwing: string;
+  mtrl: string;
+}
+
+
 function Loader() {
   const { progress } = useProgress()
   console.log(progress)
   return <Html center>{progress} % loaded</Html>
 }
 
-  const Scene: React.FC = ({drwing,mtrl}) => {
+  const Scene: React.FC<MyComponentProps> = ({drwing,mtrl}) => {
   const materials = useLoader(MTLLoader, `./${mtrl}`)
 
   const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
