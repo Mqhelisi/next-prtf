@@ -22,10 +22,10 @@ function Loader() {
   const Scene: React.FC<MyComponentProps> = ({drwing,mtrl}) => {
   const materials = useLoader(MTLLoader, `./${mtrl}`) as MTLLoader.MaterialCreator
 
-  const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader as Group => {
+  const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
     materials.preload()
     loader.setMaterials(materials)
-  })
+  }) as Group
 //   obj_sngl.materialLibraries(`./${mtrl}`)
 
 //   const loader = new OBJLoader();
