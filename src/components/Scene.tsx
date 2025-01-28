@@ -25,7 +25,7 @@ function Loader() {
   const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
     materials.preload()
   }) 
-    obj_sngl.setMaterials(materials)
+    // obj_sngl.setMaterials(materials)
     
 //   obj_sngl.materialLibraries(`./${mtrl}`)
 
