@@ -3,8 +3,8 @@ import { Circle, Html, OrbitControls, Stats, useProgress } from '@react-three/dr
 import { Canvas, useLoader } from '@react-three/fiber';
 import React, { Suspense } from 'react';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
-import { OBJLoader } from 'three/examples/jsm/loaders/OBJLoader';
-import { MTLLoader } from 'three/examples/jsm/loaders/MTLLoader';
+import { OBJLoader } from '../../node_modules/three/examples/jsm/loaders/OBJLoader';
+import { MTLLoader } from '../../node_modules/three/examples/jsm/loaders/MTLLoader';
 
 
 interface MyComponentProps {
