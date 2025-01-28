@@ -34,7 +34,8 @@ const MarkdownRenderer = ({ filename }) => {
     .use(remarkImages)
     .use(rehypeStringify)
     .process(text).then((vals) => {
-      setMarkdownData(vals.value.reduce((acc, c) => acc + String.fromCharCode(c), '');)
+  
+      setMarkdownData(vals.value.reduce((acc, c) => acc + String.fromCharCode(c), ''))
     });
         // setMarkdownData(processedContent);
       } catch (error) {
