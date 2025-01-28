@@ -5,7 +5,7 @@ import React, { Suspense } from 'react';
 // import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { OBJLoader } from '../../node_modules/three/examples/jsm/loaders/OBJLoader';
 import { MTLLoader } from '../../node_modules/three/examples/jsm/loaders/MTLLoader';
-
+import { Group } from 'three';
 
 interface MyComponentProps {
   drwing: string;
@@ -22,7 +22,7 @@ function Loader() {
   const Scene: React.FC<MyComponentProps> = ({drwing,mtrl}) => {
   const materials = useLoader(MTLLoader, `./${mtrl}`) as MTLLoader.MaterialCreator
 
-  const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
+  const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader as Group => {
     materials.preload()
     loader.setMaterials(materials)
   })
