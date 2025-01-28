@@ -19,7 +19,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 
 const MarkdownRenderer = ({ filename }) => {
-  const [markdownData, setMarkdownData] = useState('');
+  const [markdownData, setMarkdownData] = useState();
 
   useEffect(() => {
     const fetchData = async () => {
@@ -35,7 +35,7 @@ const MarkdownRenderer = ({ filename }) => {
     .use(rehypeStringify)
     .process(text).then((vals) => {
   
-      setMarkdownData(vals.value.reduce((acc, c) => acc + String.fromCharCode(c), ''))
+      setMarkdownData(vals.value)
     });
         // setMarkdownData(processedContent);
       } catch (error) {
