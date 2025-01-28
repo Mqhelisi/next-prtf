@@ -30,7 +30,7 @@ export default function DrawrComp({indxCn, lss}){
         </DialogHeader>
         <div className="h-screen grid grid-rows-[70%_30%]">
       <div className="row-span-1 flex items-center justify-center border-dotted border-4"> 
-        {/* Content for the first row */}
+        {/* Content for THE first row */}
         <Scene drwing = {lss.name} mtrl = {lss.item}/>
       </div>
       <div className="grid grid-cols-3 gap-4 rounded-lg mt-4"> 
