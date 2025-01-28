@@ -20,7 +20,7 @@ function Loader() {
 }
 
   const Scene: React.FC<MyComponentProps> = ({drwing,mtrl}) => {
-  const materials = useLoader(MTLLoader, `./${mtrl}`)
+  const materials = useLoader(MTLLoader, `./${mtrl}`) as MTLLoader.MaterialCreator
 
   const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
     materials.preload()
