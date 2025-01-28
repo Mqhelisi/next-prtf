@@ -24,8 +24,9 @@ function Loader() {
 
   const obj_sngl = useLoader(OBJLoader, `./${drwing}`, loader => {
     materials.preload()
-    loader.setMaterials(materials)
   }) as Group
+    obj_sngl.setMaterials(materials)
+    
 //   obj_sngl.materialLibraries(`./${mtrl}`)
 
 //   const loader = new OBJLoader();
