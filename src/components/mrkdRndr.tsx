@@ -19,7 +19,7 @@ import remarkParse from 'remark-parse'
 import remarkRehype from 'remark-rehype'
 
 const MarkdownRenderer = ({ filename }) => {
-  const [markdownData, setMarkdownData] = useState();
+  const [markdownData, setMarkdownData] = useState('');
 
   useEffect(() => {
     const fetchData = async () => {
