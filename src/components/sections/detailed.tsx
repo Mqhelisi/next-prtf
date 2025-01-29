@@ -8,7 +8,6 @@ import {
   } from "lucide-react";
   
 // import Upldr from "../ui/upld";
-import { InputForm } from "../ui/InputForm";
 
   export default function IconSection2ColsGrid() {
     return (
